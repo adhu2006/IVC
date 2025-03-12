@@ -1,0 +1,147 @@
+rvu@rvu-OptiPlex-SFF-7020:~$ git init WebProject.
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/rvu/WebProject./.git/
+rvu@rvu-OptiPlex-SFF-7020:~$ cd WebProject.
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git config user.email"sbalamuruganadarshbca24@rvu.edu.in
+> ^C
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git config user.name "adhu2006"
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$  git config user.email"sbalamuruganadarshbca24@rvu.edu.in"
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git remote add origin https://github.com/adhu2006/WebProject..git
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git checkout -b feature-login
+Switched to a new branch 'feature-login'
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ echo "<form>Login Form</form>" > login.html
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git add login.html
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git commit -m "Add basic login form"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'rvu@rvu-OptiPlex-SFF-7020.(none)')
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git config --global user.email "sbalamuruganadarshbca24@rvu.edu.in"
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$  git config --global user.name "adhu2006"
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git commit -m "Add basic login form"
+[feature-login (root-commit) 9cca75f] Add basic login form
+ 1 file changed, 1 insertion(+)
+ create mode 100644 login.html
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ echo "form { padding: 20px; }" > style.css
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git add style.css
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git commit -m "Style login form"
+[feature-login 520c5e0] Style login form
+ 1 file changed, 1 insertion(+)
+ create mode 100644 style.css
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git checkout development
+error: pathspec 'development' did not match any file(s) known to git
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git checkout-b development
+git: 'checkout-b' is not a git command. See 'git --help'.
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git merge --no-ff feature-login
+Already up to date.
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ sed -i 's/Login Form/Corrected Login Form/g' login.html
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git commit -am "Fix typo in login form"
+[hotfix 2c1498a] Fix typo in login form
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git checkout development
+error: pathspec 'development' did not match any file(s) known to git
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git checkout -b development
+Switched to a new branch 'development'
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git checkout development
+Already on 'development'
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git merge hotfix
+Already up to date.
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git tag -a release-1.0 -m "Release version 1.0"
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git push --all; git push --tags
+Username for 'https://github.com': adhu2006
+Password for 'https://adhu2006@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/adhu2006/WebProject..git/'
+Username for 'https://github.com': adhu2006
+Password for 'https://adhu2006@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/adhu2006/WebProject..git/'
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git clone -b release-1.0 --single-branch https://github.com/adhu2006/WebProject..git
+Cloning into 'WebProject.'...
+warning: Could not find remote branch release-1.0 to clone.
+fatal: Remote branch release-1.0 not found in upstream origin
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git tag -a release-1.0 -m "Release version 1.0"
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git push --all; git push --tags
+Username for 'https://github.com': adhu2006
+Password for 'https://adhu2006@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/adhu2006/WebProject..git/'
+Username for 'https://github.com': adhu2006
+Password for 'https://adhu2006@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/adhu2006/WebProject..git/'
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git clone -b release-1.0 --single-branch https://github.com/adhu2006/WebProject..git
+Cloning into 'WebProject.'...
+warning: Could not find remote branch release-1.0 to clone.
+fatal: Remote branch release-1.0 not found in upstream origin
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git tag -a release-1.0 -m "Release version 1.0"
+fatal: tag 'release-1.0' already exists
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ git clone -b release-1.0 --single-branch https://github.com/adhu2006/WebProject..git
+Cloning into 'WebProject.'...
+warning: Could not find remote branch release-1.0 to clone.
+fatal: Remote branch release-1.0 not found in upstream origin
+rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$ 
+bash: rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$: No such file or directory
+bash: rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$: No such file or directory
+Username for 'https://github.com': 
+Password for 'https://github.com': 
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/adhu2006/WebProject..git/'
+Username: command not found
+Command 'Password' not found, did you mean:
+  command 'assword' from deb assword (0.12.2-1)
+Try: sudo apt install <deb name>
+Command 'remote:' not found, did you mean:
+  command 'remote' from snap remote (1.09)
+See 'snap info <snapname>' for additional versions.
+Command 'remote:' not found, did you mean:
+  command 'remote' from snap remote (1.09)
+See 'snap info <snapname>' for additional versions.
+fatal:: command not found
+Username: command not found
+Command 'Password' not found, did you mean:
+  command 'assword' from deb assword (0.12.2-1)
+Try: sudo apt install <deb name>
+Command 'remote:' not found, did you mean:
+  command 'remote' from snap remote (1.09)
+See 'snap info <snapname>' for additional versions.
+Command 'remote:' not found, did you mean:
+  command 'remote' from snap remote (1.09)
+See 'snap info <snapname>' for additional versions.
+fatal:: command not found
+bash: rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$: No such file or directory
+Cloning: command not found
+warning:: command not found
+fatal:: command not found
+bash: rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$: No such file or directory
+fatal:: command not found
+bash: rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$: No such file or directory
+Cloning: command not found
+warning:: command not found
+fatal:: command not found
+bash: rvu@rvu-OptiPlex-SFF-7020:~/WebProject.$: No such file or directory
+
